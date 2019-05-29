@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1559154180 source:c:\users\ola\desktop\stackfsm\main.cpp
+	<functional>
+	<iostream>
+	<cmath>
+	<thread>
+	<chrono>
+	<stack>
+
