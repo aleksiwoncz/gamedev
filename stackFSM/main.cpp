@@ -53,7 +53,7 @@ public:
         function<void ()> activeState = getCurrentState();
         if(activeState == NULL)
             this->statesStack.push(state);
-        else if(getAddress(activeState) != getAddress(state))
+        else if(getAddress(activeState) == getAddress(state))
             this->statesStack.push(state);
     }
 
@@ -138,7 +138,7 @@ void Ant::runAway() {
 
 void Ant:: meetQueen() {
     cout << "Krolowa jest w poblizu, musze sie przywitac!" << endl;
-    this->velocity = new Vector2D(position->x - user->x, position->y - user->y);
+    this->velocity = new Vector2D(position->x - queen->x, position->y - queen->y);
     if(distance(queen, this->position) > 30) {
         this->brain->popState();
     }
